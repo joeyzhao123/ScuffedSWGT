@@ -112,3 +112,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+_pycache
+build
+dist
+gonyroon.csv
+runes-data.csv
+newroon.csv
+gui.spec
