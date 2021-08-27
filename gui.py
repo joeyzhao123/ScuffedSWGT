@@ -5,6 +5,7 @@ import pandas as pd
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUi
 import json
+import mplwidget
 
 class MyWidget(QMainWindow):
 
@@ -57,6 +58,7 @@ class MyWidget(QMainWindow):
 
     def analyze(self):
         data = self.data
+        data = data[data.level >= 12]
         
         maxgrinds = {"HP%":10,"DEF%":10,"ATK%":10,"HP flat":550,
                      "DEF flat":34,"ATK flat":8,"SPD":5,"RES":0, "ACC":0,
