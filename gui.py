@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUi
 import json
 import mplwidget
+import os
 
 class MyWidget(QMainWindow):
 
@@ -13,7 +14,7 @@ class MyWidget(QMainWindow):
         self.df = ''
         self.file, self.path = '', ''
         super().__init__()
-        loadUi('line.ui', self)
+        loadUi(os.getcwd() + '\line.ui', self)
         self.data = 1
         self.select_button.clicked.connect(self.loadfile)
         self.comboBox.currentIndexChanged.connect(self.select_rune_type)
